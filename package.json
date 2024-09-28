@@ -1,0 +1,37 @@
+{
+  "name": "learn-arcgis",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "copy:all": "npm run copy:components && npm run copy:core",
+    "copy:components": "cpx ./node_modules/@arcgis/map-components/dist/arcgis-map-components/assets/**/*.* ./public/assets",
+    "copy:core": "cpx ./node_modules/@arcgis/core/assets/**/*.* ./public/assets",
+    "copy:calcite": "cpx ./node_modules/@esri/calcite-components/dist/calcite/assets/**/*.* ./public/assets"
+  },
+  "dependencies": {
+    "@arcgis/core": "^4.30.9",
+    "@arcgis/map-components": "^4.30.7",
+    "@vueuse/core": "^11.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "cpx2": "^7.0.1",
+    "lucide-vue-next": "^0.446.0",
+    "radix-vue": "^1.9.6",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7",
+    "vue": "^3.4.37",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.3",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "autoprefixer": "^10.4.20",
+    "sass": "1.77.6",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.1"
+  }
+}
