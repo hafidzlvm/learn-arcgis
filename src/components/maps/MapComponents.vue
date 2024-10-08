@@ -6,7 +6,6 @@ import esriConfig from '@arcgis/core/config.js';
 import { setArcgisAssetPath as setMapAssetPath } from '@arcgis/map-components/dist/components';
 
 import LOD from "@arcgis/core/layers/support/LOD.js";
-import TileInfo from "@arcgis/core/layers/support/TileInfo.js";
 import Zoom from '@arcgis/core/widgets/Zoom';
 import ScaleBar from '@arcgis/core/widgets/ScaleBar.js';
 
@@ -37,19 +36,6 @@ onMounted(() => {
     new LOD({ level: 15, resolution: 4.77731426782352, scale: 18055.954822 }),
     new LOD({ level: 16, resolution: 2.38865713391176, scale: 9027.977411 }),
   ];
-  const tileInfo = new TileInfo({
-    dpi: 96,
-    format: "jpg",
-    lods: customLODs,
-    size: [256, 256],
-    origin: {
-      x: -20037508.342787,
-      y: 20037508.342787
-    },
-    spatialReference: {
-      wkid: 102100
-    }
-  });
 
   map = new Map({
     basemap: 'streets-vector',
