@@ -24,18 +24,6 @@ let map = null;
 let featureLayer = null;
 let zoom = null;
 onMounted(() => {
-  const customLODs = [
-    new LOD({ level: 7, resolution: 1222.99245256282, scale: 4622324.434309 }),
-    new LOD({ level: 8, resolution: 611.49622628141, scale: 2311162.217155 }),
-    new LOD({ level: 9, resolution: 305.748113140705, scale: 1155581.108577 }),
-    new LOD({ level: 10, resolution: 152.874056570353, scale: 577790.554289 }),
-    new LOD({ level: 11, resolution: 76.4370282851763, scale: 288895.277144 }),
-    new LOD({ level: 12, resolution: 38.2185141425881, scale: 144447.638572 }),
-    new LOD({ level: 13, resolution: 19.1092570712941, scale: 72223.819286 }),
-    new LOD({ level: 14, resolution: 9.55462853564703, scale: 36111.909643 }),
-    new LOD({ level: 15, resolution: 4.77731426782352, scale: 18055.954822 }),
-    new LOD({ level: 16, resolution: 2.38865713391176, scale: 9027.977411 }),
-  ];
 
   map = new Map({
     basemap: 'streets-vector',
@@ -47,7 +35,6 @@ onMounted(() => {
     center: [106.8215, -6.1754], // Jakarta
     zoom: 13,
     constraints: {
-      lods: customLODs,
       snapToZoom: false
     },
     ui: {
