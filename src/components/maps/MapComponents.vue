@@ -5,7 +5,6 @@ import MapView from '@arcgis/core/views/MapView';
 import esriConfig from '@arcgis/core/config.js';
 import { setArcgisAssetPath as setMapAssetPath } from '@arcgis/map-components/dist/components';
 
-import LOD from "@arcgis/core/layers/support/LOD.js";
 import Zoom from '@arcgis/core/widgets/Zoom';
 import ScaleBar from '@arcgis/core/widgets/ScaleBar.js';
 
